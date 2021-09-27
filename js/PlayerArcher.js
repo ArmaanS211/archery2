@@ -36,5 +36,14 @@ class PlayerArcher {
       image(this.image, 0, 0, this.width, this.height);
       pop();
     }
+
+    shoot(a){
+      var velocity = p5.Vector.fromAngle(a);
+      velocity.mult(20);
+      Matter.Body.setStatic(this.body, false);
+      Matter.Body.setVelocity(this.body, { x: velocity.x, y: velocity.y});
+        
+    }
+
   }
   
