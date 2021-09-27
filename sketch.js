@@ -83,7 +83,7 @@ function draw() {
 function keyPressed() {
 
   if(keyCode === 32){
-    // create an arrow object and add into an array ; set its angle same as angle of playerArcher
+    arrow.shoot(playerArcher.body.angle);
 
   }
 }
